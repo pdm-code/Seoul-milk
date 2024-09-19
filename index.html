@@ -10,11 +10,11 @@
 	<!-- 제이쿼리 cdn -->
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 	<!-- 슬라이드 스와이퍼 script -->
-	<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<!-- index.js -->
 	<script src="assets/js/index.js"></script>
 	<!-- 슬라이드 스와이퍼 css -->
-	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/> -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 	<!-- css -->
 	<link rel="stylesheet" href="assets/css/reset.css">
 	<link rel="stylesheet" href="assets/css/style.css">
@@ -98,14 +98,123 @@
 			</div>
 		</div>
 	</header>
+	<!-- 헤더 메뉴 바 클릭시 페이지 -->
+	<div class="menu-bar-page">
+		<div class="container">
+			<div class="item">
+				<span>회사소개</span>
+				<a href="#none">조합현황</a>
+				<a href="#none">조합정보</a>
+				<a href="#none">중앙연구소</a>
+				<a href="#none">오시는길</a>
+			</div>
+			<div class="item">
+				<span>제품소개</span>
+				<a href="#none">우유</a>
+				<a href="#none">발효유</a>
+				<a href="#none">음료</a>
+				<a href="#none">커피</a>
+				<a href="#none">치즈</a>
+				<a href="#none">크림·버터</a>
+				<a href="#none">분유·연유</a>
+				<a href="#none">디저트</a>
+				<a href="#none">반려동물제품</a>
+				<a href="#none">수입제품</a>
+			</div>
+			<div class="item">
+				<span>지속가능경영</span>
+				<a href="#none">안전 및 품질 경영</a>
+				<a href="#none">ESG 경영</a>
+			</div>
+			<div class="item">
+				<span>홍보</span>
+				<a href="#none">인플루언서</a>
+				<a href="#none">광고자료</a>
+				<a href="#none">공식 SNS</a>
+				<a href="#none">공장견학</a>
+			</div>
+			<div class="item">
+				<span>이벤트</span>
+				<a href="#none">진행 이벤트</a>
+				<a href="#none">당첨자 발표</a>
+			</div>
+		</div>
+	</div>
+	<!--  화면 0 ~ 1084px 사이트맵-->
+	<div class="site-map">
+		<div class="sec1">
+			<div class="info-btn">
+				<a href="#none">
+					<span class="career">채용정보</span>
+				</a>
+				<a href="#none">
+					<span class="customer">고객지원</span>
+				</a>
+			</div>
+			<button type="button" class="close-btn"></button>
+		</div>
+		<div class="sec2">
+			<div class="item">
+				<span>회사소개</span>
+				<div class="sub-menu">
+					<a href="#none">조합현황</a>
+					<a href="#none">조합정보</a>
+					<a href="#none">중앙연구소</a>
+					<a href="#none">오시는길</a>
+				</div>
+			</div>
+			<div class="item">
+				<span>제품소개</span>
+				<div class="sub-menu">
+					<a href="#none">우유</a>
+					<a href="#none">발효유</a>
+					<a href="#none">음료</a>
+					<a href="#none">커피</a>
+					<a href="#none">치즈</a>
+					<a href="#none">크림·버터</a>
+					<a href="#none">분유·연유</a>
+					<a href="#none">디저트</a>
+					<a href="#none">반려동물제품</a>
+					<a href="#none">수입제품</a>
+				</div>
+			</div>
+			<div class="item">
+				<span>지속가능경영</span>
+				<div class="sub-menu">
+					<a href="#none">안전 및 품질 경영</a>
+					<a href="#none">ESG 경영</a>
+				</div>
+			</div>
+			<div class="item">
+				<span>홍보</span>
+				<div class="sub-menu">
+					<a href="#none">인플루언서</a>
+					<a href="#none">광고자료</a>
+					<a href="#none">공식 SNS</a>
+					<a href="#none">공장견학</a>
+				</div>
+			</div>
+			<div class="item">
+				<span>이벤트</span>
+				<div class="sub-menu">
+					<a href="#none">진행 이벤트</a>
+					<a href="#none">당첨자 발표</a>
+				</div>
+			</div>
+		</div>
+		<div class="sec3">
+			<button type="button">KR</button>
+			<button type="button">EN</button>
+		</div>
+	</div>
 	<!-- 비주얼1 -->
 	<section class="visual1">
 		<video autoplay loop muted>
 			<source src="assets/img/ad_seoul_milk.mp4" type="video/mp4">
 		</video>
 	</section>
-	<!-- 비주얼2 -->
-	<section class="visual2">
+	<!-- 비주얼2 회사소개-->
+	<section id="v1" class="visual2 v1">
 		<div class="container">
 			<div class="top-wrap">
 				<span class="main-tit">ABOUT</span>
@@ -116,7 +225,7 @@
 					신뢰 받는 기업이 되겠습니다.
 				</p>
 				<div class="about-menu">
-					<a href="#none">회사소개</a>
+					<a href="#none" class="active">회사소개</a>
 					<a href="#none">중앙연구소</a>
 					<a href="#none">경영이념</a>
 					<a href="#none">히스토리</a>
@@ -140,8 +249,175 @@
 			</div>
 		</div>
 	</section>
+	<!-- 비주얼2 중앙연구소 -->
+	<section id="v2" class="visual2 v2">
+		<div class="container">
+			<div class="top-wrap">
+				<span class="main-tit">ABOUT</span>
+				<p class="txt1">맛있는 우유로</p>
+				<p class="txt1">세상을 건강하게</p>
+				<p class="txt2">
+					서울우유협동조합은 고객에게 사랑 받는 기업,<br/>
+					신뢰 받는 기업이 되겠습니다.
+				</p>
+				<div class="about-menu">
+					<a href="#none">회사소개</a>
+					<a href="#none" class="active">중앙연구소</a>
+					<a href="#none">경영이념</a>
+					<a href="#none">히스토리</a>
+					<a href="#none">인재채용</a>
+				</div>
+			</div>
+			<div class="bot-wrap">
+				<span class="sub-tit">중앙연구소</span>
+				<p class="txt3">
+					사람·사회·지구를 건강하게 하기 위한 노력으로 고객에게 사랑받는 기업,<br/>
+					고객과 함께하는 기업이 되겠습니다. 서울우유 중앙연구소는 1989년 설립되어 <br/>
+					국민 건강에 기여한다는 목표 아래 수많은 제품을 개발하고, 연구해 오고 있습니다.<br/>
+					지하 1층 지상 4층 연면적 4550㎡ 규모의 종합 연구개발 기능을 갖는 중앙연구소<br/> 
+					를 준공하고, 화학분석실험실, 생물학실험실 등의 기초연구와 응용연구가 가능한<br/> 
+					최첨단 시설을 구축했습니다. 머물지 않고, 흐르는 물이 되기 위해 연구원들은<br/> 
+					새로움을 추구하기 위해 노력하겠습니다.
+				</p>
+				<span class="sub-tit">연구팀</span>
+				<p class="txt3">
+					유유연구팀, 발효유연구팀, 음료연구팀, 가공품연구팀,<br/>  
+					신성장제품연구팀, 디저트개발팀, R&D지원팀, 응용연구팀
+				</p>
+			</div>
+		</div>
+	</section>
+	<!-- 비주얼2 경영이념 -->
+	<section id="v3" class="visual2 v3">
+		<div class="container">
+			<div class="top-wrap">
+				<span class="main-tit">ABOUT</span>
+				<p class="txt1">맛있는 우유로</p>
+				<p class="txt1">세상을 건강하게</p>
+				<p class="txt2">
+					서울우유협동조합은 고객에게 사랑 받는 기업,<br/>
+					신뢰 받는 기업이 되겠습니다.
+				</p>
+				<div class="about-menu">
+					<a href="#none">회사소개</a>
+					<a href="#none">중앙연구소</a>
+					<a href="#none">경영이념</a>
+					<a href="#none">히스토리</a>
+					<a href="#none">인재채용</a>
+				</div>
+			</div>
+			<div class="bot-wrap">
+				<span class="sub-tit">경영이념</span>
+				<p class="txt3">
+					사람을 건강하게, 사회를 건강하게, 지구를 건강하게!<br/>
+					고객건강과 만족을 넘어서 낙농발전과 동물복지,친환경 제품을 생산하여<br/> 
+					모두에게 사랑받는 기업, 신뢰받는 기업이 되도록 노력하겠습니다.<br/>
+				</p>
+				<span class="sub-tit">행동지침</span>
+				<p class="txt3">고객 지향, 제품 혁신, 원가 절감, 조직 문화</p>
+			</div>
+		</div>
+	</section>
+	<!-- 비주얼2 히스토리 -->
+	<section id="v4" class="visual2 v4">
+		<div class="container">
+			<div class="top-wrap">
+				<span class="main-tit">ABOUT</span>
+				<p class="txt1">맛있는 우유로</p>
+				<p class="txt1">세상을 건강하게</p>
+				<p class="txt2">
+					서울우유협동조합은 고객에게 사랑 받는 기업,<br/>
+					신뢰 받는 기업이 되겠습니다.
+				</p>
+				<div class="about-menu">
+					<a href="#none">회사소개</a>
+					<a href="#none">중앙연구소</a>
+					<a href="#none">경영이념</a>
+					<a href="#none">히스토리</a>
+					<a href="#none">인재채용</a>
+				</div>
+			</div>
+			<div class="bot-wrap">
+				<span class="sub-tit">서울우유의 역사</span>
+				<div class="history-wrap">
+					<ul>
+						<li class="date">1937.04.13</li>
+						<li class="achive">청량리농유조합 조직</li>
+					</ul>
+					<ul>
+						<li class="date">1937.07.11</li>
+						<li class="achive">경성우유동업조합 창립</li>
+					</ul>
+					<ul>
+						<li class="date">1945.09.02</li>
+						<li class="achive">경성우유동업조합을 서울우유동업조합으로 개칭</li>
+					</ul>
+					<ul>
+						<li class="date">1952.04.08</li>
+						<li class="achive">빙과사업 실시</li>
+					</ul>
+					<ul>
+						<li class="date">1959.07.31</li>
+						<li class="achive">ICA 무상원조에 의한 살균조, 충병충진기 도입</li>
+					</ul>
+					<ul>
+						<li class="date">1959.08.02</li>
+						<li class="achive">화물자동차에 의한 집유업무 개시</li>
+					</ul>
+					<ul>
+						<li class="date">1961.12.29</li>
+						<li class="achive">서울우유동업조합 설립준비회 개최</li>
+					</ul>
+					<ul>
+						<li class="date">1961.12.31</li>
+						<li class="achive">서울우유동업조합 해체</li>
+					</ul>
+				</div> 
+			</div>
+		</div>
+	</section>
+	<!-- 비주얼2 인재채용 -->
+	<section id="v5" class="visual2 v5">
+		<div class="container">
+			<div class="top-wrap">
+				<span class="main-tit">ABOUT</span>
+				<p class="txt1">맛있는 우유로</p>
+				<p class="txt1">세상을 건강하게</p>
+				<p class="txt2">
+					서울우유협동조합은 고객에게 사랑 받는 기업,<br/>
+					신뢰 받는 기업이 되겠습니다.
+				</p>
+				<div class="about-menu">
+					<a href="#none">회사소개</a>
+					<a href="#none">중앙연구소</a>
+					<a href="#none">경영이념</a>
+					<a href="#none">히스토리</a>
+					<a href="#none">인재채용</a>
+				</div>
+			</div>
+			<div class="bot-wrap">
+				<span class="sub-tit">인재상</span>
+				<div class="talent">
+					<ul>
+						<li class="tit">Creative</li>
+						<li class="txt3">창의적 사고와 행동력으로 조직의 미래를 이끌어 갈 수 있는 인재</li>
+					</ul>
+					<ul>
+						<li class="tit">Adaptable to Change</li>
+						<li class="txt3">창의적 사고와 행동력으로 조직의 미래를 이끌어 갈 수 있는 인재</li>
+					</ul>
+					<ul>
+						<li class="tit">Cooperative</li>
+						<li class="txt3">나를 포함한 구성원들과 협력을 통해 조직의 시너지를 창출할 수 있는 인재</li>
+					</ul>
+				</div>
+				<span class="sub-tit">복리후생</span>
+				<p class="txt3">교육지원, 경조지원, 복지지원, 휴가지원</p>
+			</div>
+		</div>
+	</section>
 	<!-- 비주얼3 -->
-	<section class="visual3">
+	<!-- <section class="visual3">
 		<div class="container">
 			<div class="top-wrap">
 				<span class="main-tit">PRODUCT</span>
@@ -151,25 +427,102 @@
 					다양한 제품을 생산하고 있습니다.
 				</p>
 			</div>
-			<div class="bot-wrap">
-				<div class="productSwiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<a href="#none"></a>
-						</div>
-						<div class="swiper-slide">
-							<a href="#none"></a>
-						</div>
-						<div class="swiper-slide">
-							<a href="#none"></a>
-						</div>
+			<div class="productSwiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#none">
+							<span class="tit">발효유1</span>
+							<p>
+								편리하게 맛있게<br/>
+								하루 건강을 채우는<br/>
+								유산균 발효유<br/>
+							</p>
+							<span class="txt">제품보기</span>
+						</a>
 					</div>
-					<div class="swiper-button-prev"></div>
-					<div class="swiper-button-next"></div>
+					<div class="swiper-slide">
+						<a href="#none">
+							<span class="tit">발효유2</span>
+							<p>
+								편리하게 맛있게<br/>
+								하루 건강을 채우는<br/>
+								유산균 발효유<br/>
+							</p>
+							<span class="txt">제품보기</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#none">
+							<span class="tit">발효유3</span>
+							<p>
+								편리하게 맛있게<br/>
+								하루 건강을 채우는<br/>
+								유산균 발효유<br/>
+							</p>
+							<span class="txt">제품보기</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#none">
+							<span class="tit">발효유4</span>
+							<p>
+								편리하게 맛있게<br/>
+								하루 건강을 채우는<br/>
+								유산균 발효유<br/>
+							</p>
+							<span class="txt">제품보기</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#none">
+							<span class="tit">발효유5</span>
+							<p>
+								편리하게 맛있게<br/>
+								하루 건강을 채우는<br/>
+								유산균 발효유<br/>
+							</p>
+							<span class="txt">제품보기</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#none">
+							<span class="tit">발효유6</span>
+							<p>
+								편리하게 맛있게<br/>
+								하루 건강을 채우는<br/>
+								유산균 발효유<br/>
+							</p>
+							<span class="txt">제품보기</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#none">
+							<span class="tit">발효유7</span>
+							<p>
+								편리하게 맛있게<br/>
+								하루 건강을 채우는<br/>
+								유산균 발효유<br/>
+							</p>
+							<span class="txt">제품보기</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#none">
+							<span class="tit">발효유8</span>
+							<p>
+								편리하게 맛있게<br/>
+								하루 건강을 채우는<br/>
+								유산균 발효유<br/>
+							</p>
+							<span class="txt">제품보기</span>
+						</a>
+					</div>
 				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!-- 비주얼4 -->
 	<section class="visual4">
 		<div class="container">
@@ -184,38 +537,30 @@
 			</div>
 			<div class="bot-wrap">
 				<a href="#none">
-					<div class="txt-wrap">
-						<p>
-							서울우유<br/>
-							친환경을 위한 투자
-						</p>
-						<span>더보기</span>
-					</div>
+					<p>
+						서울우유<br/>
+						친환경을 위한 투자
+					</p>
+					<span>더보기</span>
 				</a>
 				<a href="#none">
-					<div class="txt-wrap">
-						<p>
-							사회 가치 창출 및<br/>
-							동반성장을 위한 상생
-						</p>
-						<span>더보기</span>
-					</div>
+					<p>
+						사회 가치 창출 및<br/>
+						동반성장을 위한 상생
+					</p>
+					<span>더보기</span>
 				</a>
 				<a href="#none">
-					<div class="txt-wrap">
-						<p>
-							체계적이고 투명한<br/>
-							서울우유 윤리 경영 시스템
-						</p>
-						<span>더보기</span>
-					</div>
+					<p>
+						체계적이고 투명한<br/>
+						서울우유 윤리 경영 시스템
+					</p>
+					<span>더보기</span>
 				</a>
 			</div>
 		</div>
-		<div class="circle1"></div>
-		<div class="circle2"></div>
-		<div class="circle3"></div>
 	</section>
+	<!-- 비주얼5 -->
 	<section class="visual5">
 		<div class="container">
 			<div class="top-wrap">
@@ -265,6 +610,7 @@
 				</a>
 			</div>
 		</div>
+        <div></div>
 		<div class="circle1"></div>
 		<div class="circle2"></div>
 		<div class="circle3"></div>
@@ -273,15 +619,29 @@
 		<div class="container">
 			<div class="footer-top">
 				<div class="nav">
-					<a href="#none">개인정보처리방침</a>
-					<a href="#none">이용약관</a>
-					<a href="#none">이메일무단수집거부</a>
-					<a href="#none">공정거래 자율준수 프로그램</a>
-					<a href="#none">신용정보활용체제</a>
-					<a href="#none">금융소비자보호</a>
+                    <div>
+                        <a href="#none" class="red">개인정보처리방침</a>
+                        <a href="#none">이용약관</a>
+                        <a href="#none">이메일무단수집거부</a>
+                    </div>
+                    <div>
+                        <a href="#none">공정거래 자율준수 프로그램</a>
+                        <a href="#none">신용정보활용체제</a>
+                        <a href="#none">금융소비자보호</a>
+                    </div>
 				</div>
-				<button>
+				<button class="sns-btn">
 					<span>Brand SNS</span>
+                    <!-- sns-btn 클릭시 메뉴 -->
+					<div class="sns-wrap">
+						<a href="#none">아이펫밀크 인스타그램</a>
+						<a href="#none">아침에주스 인스타그램</a>
+						<a href="#none">커피연구소 인스타그램</a>
+						<a href="#none">치즈 페이스북</a>
+						<a href="#none">치즈 블로그</a>
+						<a href="#none">치즈 인스타그램</a>
+						<a href="#none">밀크홀 1937 인스타그램</a>
+					</div>
 				</button>
 			</div>
 			<div class="footer-mid">
@@ -303,8 +663,15 @@
 					</div>
 					<span class="ml0 pr0">Copyright © 2023 Seoulmilk. All Rights Reserved.</span>
 				</address>
-				<button class="family">
+				<button class="family-btn">
 					<span>Family Site</span>
+                    <!-- family-btn 클릭시 메뉴 -->
+					<div class="family-wrap">
+						<a href="#none">서울우유 쇼핑몰(나100샵)</a>
+						<a href="#none">서울우유가정배달서비스</a>
+						<a href="#none">치즈 브랜드 사이트</a>
+						<a href="#none">서울우유 공장견학</a>
+					</div>
 				</button>
 			</div>
 		</div>
