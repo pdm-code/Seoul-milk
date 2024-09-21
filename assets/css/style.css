@@ -312,6 +312,7 @@
   background: #fff;
   z-index: 1000;
   border-top-left-radius: 30px;
+  display: none;
 }
 
 .site-map .sec1 {
@@ -532,8 +533,10 @@
 /* 비주얼2 */
 .visual2 {
   position: relative;
-  background: url(../img/visual2_img1.png) no-repeat center / 100% 100%;
   padding: 140px 0;
+  box-sizing: border-box;
+  background: url(../img/visual2_img1.png) no-repeat;
+  background-size: cover;
   z-index: -2;
 }
 
@@ -545,122 +548,90 @@
   display: block;
   width: 100%;
   height: 100%;
-  background-color: rgba(250, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   z-index: -1;
 }
 
-.visual2.v2 {
-  /* display: none; */
-  background: url(../img/visual2_img2.png) no-repeat center / 100% 100%;
-}
-
-.visual2.v3 {
-  /* display: none; */
-  background: url(../img/visual2_img3.png) no-repeat center / 100% 100%;
-  padding: 160px 0;
-}
-
-.visual2.v4 {
-  /* display: none; */
-  background: url(../img/visual2_img4.png) no-repeat center / 100% 100%;
-}
-
-.visual2.v5 {
-  /* display: none; */
-  background: url(../img/visual2_img5.png) no-repeat center / 100% 100%;
-}
-
-
-.visual2 .container .top-wrap .about-menu {
+.visual2 .container .top-wrap  .about-menu {
   font-size: 0;
 }
 
-.visual2 .container .top-wrap .about-menu a {
+.visual2 .container .top-wrap  .about-menu a {
   font-size: 18px;
   font-weight: 500;
   color: #282828;
-  padding: 0 12px; 
+  padding: 0 12px;
 }
 
-.visual2 .container .top-wrap .about-menu a.active {
+.visual2 .container .top-wrap  .about-menu a.active {
   color: #ED1C24;
 }
 
-.visual2 .container .bot-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.visual2 .container .bot-wrap .sub-tit {
+.visual2 .container .bot-wrap .tit {
+  display: block;
   font-size: 32px;
   font-weight: 700;
-  color: #101010;
-  margin-bottom: 20px;
-}
-
-.visual2 .container .bot-wrap .txt3 {
-  font-size: 18px;
-  font-weight: 400;
-  color: #101010;
+  line-height: 46px;
+  color: #282828;
   text-align: center;
-  line-height: 32px;
+  margin-bottom: 12px;
 }
 
-.visual2 .container .bot-wrap .txt3:nth-of-type(1) {
-  margin-bottom: 50px;
-}
-
-.visual2.v4 .container .bot-wrap {
-  flex-direction: row;
-  justify-content: center;
-  gap: 40px;
-}
-
-.visual2.v4 .container .bot-wrap .history-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-
-.visual2.v4 .container .bot-wrap .history-wrap ul {
-  display: flex;
-  gap: 20px;
-}
-
-.visual2.v4 .container .bot-wrap .history-wrap ul li {
+.visual2 .container .bot-wrap .txt {
   font-size: 18px;
   font-weight: 400;
-  color: #101010;
+  line-height: 32px;
+  color: #282828;
+  text-align: center;
 }
 
-.visual2.v4 .container .bot-wrap .history-wrap ul .date {
-  font-weight: 500;
-}
-
-.visual2.v5 .container .bot-wrap .talent ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 16px;
-}
-
-.visual2.v5 .container .bot-wrap .talent ul:nth-of-type(3) {
+.visual2 .container .bot-wrap .txt:nth-of-type(1) {
   margin-bottom: 50px;
 }
 
-.visual2.v5 .container .bot-wrap .talent ul .tit {
-  font-size: 20px;
-  font-weight: 500;
-  color: #ED1C24;
-  line-height: 29px;
+.visual2 .container .bot-wrap.bot4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
 
-.visual2.v5 .container .bot-wrap .txt3 {
+.visual2 .container .bot-wrap.bot4 ul li {
+  margin-bottom: 15px;
+}
+
+.visual2 .container .bot-wrap.bot4 ul li span {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #282828;
+}
+
+.visual2 .container .bot-wrap.bot4 ul li span:nth-of-type(1) {
+  font-weight: 500;
+  margin-right: 15px;
+}
+
+.visual2 .container .bot-wrap.bot5 .txt:nth-of-type(1) {
   margin-bottom: 0;
 }
 
+.visual2 .container .bot-wrap.bot5 .txt span {
+  display: block;
+  line-height: 26px;
+}
+
+.visual2 .container .bot-wrap.bot5 .txt .red {
+  color:#ED1C24;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+
+.visual2 .container .bot-wrap.bot5 .txt span:nth-of-type(2) {
+  margin-bottom: 20px;
+}
 
 
 /* 비주얼3 */

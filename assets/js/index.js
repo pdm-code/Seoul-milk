@@ -22,34 +22,37 @@ $(document).ready(function(){
     $('.btn-menu .langs span').text(_langs);
   });
 
+
+
   // 비주얼2 클릭 이벤트
-  let obj = $(".visual2 .container .top-wrap .about-menu a");
-  obj.on("click",function(){
-    $(this).addClass("active");
-    obj.not($(this)).removeClass("active");
+  $('.visual2 .container .about-menu a').on('click',function(){
+    $('.visual2 .container .about-menu a').removeClass("active");
+    $(this).addClass('active');
+    
+    $('.visual2 .container .bot-wrap').hide();
+
+    let index = $(this).index();
+    $('.visual2 .container .bot-wrap').eq(index).show();
+
+    // var bgImages = [
+    //   'url(../img/visual2_img1.png)',  // 첫 번째 bot-wrap의 배경 이미지
+    //   'url(../img/visual2_img2.png)',  // 두 번째 bot-wrap의 배경 이미지
+    //   'url(../img/visual2_img3.png)',  // 세 번째 bot-wrap의 배경 이미지
+    //   'url(../img/visual2_img4.png)',  // 네 번째 bot-wrap의 배경 이미지
+    //   'url(../img/visual2_img5.png)'   // 다섯 번째 bot-wrap의 배경 이미지
+    // ];
+    // $('.visual2').css('background', bgImages[index]);
+
+  
   });
 
-  // 비주얼2 메뉴 클릭 이벤트
-  $('.visual2').hide();  // 모든 섹션을 숨김
-    $('#v1').show();  // v1 섹션만 보이게 설정
+  //비주얼2 기본페이지 로드될때 화면
+  $('.visual2 .container .bot-wrap').hide();
+  $('.visual2 .container .bot-wrap').eq(0).show();
 
-    // about-menu 클릭 시 섹션 전환
-    $('.about-menu a').click(function(e) {
-        e.preventDefault();  // 기본 동작 막기
-        
-        // 모든 섹션 숨기기
-        $('.visual2').hide();
 
-        // 클릭한 메뉴의 인덱스 가져오기
-        var index = $(this).index();
 
-        // 해당 인덱스의 섹션 보이기
-        $('.visual2').eq(index).show();
 
-        // 모든 메뉴에서 active 클래스 제거하고, 클릭한 메뉴에 추가
-        $('.about-menu a').removeClass('active');
-        $(this).addClass('active');
-    });
 
   // 슬라이드 스와이퍼
   // let swiper = new Swiper('.productSwiper', {
@@ -104,30 +107,6 @@ $(document).ready(function(){
   });
 
   // 사이트맵 클릭 이벤트
-
-  // let item = $('.sec2 .item');
-
-  // item.on('click',function(){
-  //   $(this).addClass('active');
-  //   item.not($(this)).removeClass('active');
-
-  //   if($(this).hasClass('active')){
-  //     $(this).find('.sub-menu').slideDown();
-  //   } else {
-  //     $(this).find('.sub-menu').slideUp();
-  //   }
-  // });
-
-  /* $('.sec2 .item > span').on('click', function() {
-    // 모든 sub-menu를 닫음
-    $('.sec2 .item .sub-menu').slideUp();
-    
-    // 클릭된 span 아래의 sub-menu가 닫혀 있으면 열기
-    if ($(this).next('.sub-menu').is(':hidden')) {
-      $(this).next('.sub-menu').slideDown();
-    }
-  });*/
-
   $('.sec2 .item span').on('click',function(){
     $('.sec2 .item .sub-menu').slideUp();
 
