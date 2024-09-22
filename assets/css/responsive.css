@@ -196,6 +196,15 @@
   }
 }
 
+/* 화면 0 ~ 752px */
+@media screen and (max-width:752px) {
+  .visual2 .container .bot-wrap.bot4 {
+    flex-direction: column;
+  }
+}
+
+
+
 
 
 /* 화면 0 ~ 658px */
@@ -227,10 +236,38 @@
     font-size: 13px;
   }
 
+  .visual2 .container .top-wrap .about-menu a {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .visual2 .container .bot-wrap .tit {
+    font-size: 26px;
+    line-height: 38px;
+  }
+
+  .visual2 .container .bot-wrap .txt {
+    font-size: 16px;
+  }
+
+  .visual2 .container .bot-wrap.bot4 ul li span {
+    font-size: 16px;
+  }
+
+  .visual2 .container .bot-wrap.bot5 .txt .red {
+    font-size: 18px;
+  }
+
+  
+
 }
 
 /* 화면 0 ~ 556px */
 @media screen and (max-width:556px) {
+  .visual2 .container .bot-wrap .txt {
+    font-size: 14px;
+  }
+
   .visual4 .container .bot-wrap a {
     width: 420px;
     height: 420px;

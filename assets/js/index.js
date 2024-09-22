@@ -50,22 +50,21 @@ $(document).ready(function(){
   $('.visual2 .container .bot-wrap').hide();
   $('.visual2 .container .bot-wrap').eq(0).show();
 
+  //product 슬라이드
+  let swiper = new Swiper('.productSwiper', {
+    slidesPerView: 3,
+    spaceBetween: 130,
+    direction: 'horizontal',
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
 
 
 
 
-  // 슬라이드 스와이퍼
-  // let swiper = new Swiper('.productSwiper', {
-  //   direction: 'horizontal',
-  //   loop: true,
-  //   navigation: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev',
-  //   },
-  //   slidesPerView: 3,
-  //   spaceBetween: 80, 
-    
-  // });
 
   // 푸터 브랜드 sns 클릭 이벤트
   $('.footer .container .footer-top .sns-btn .sns-wrap').hide();
@@ -89,21 +88,14 @@ $(document).ready(function(){
   });
 
   // 헤더 메뉴 바 클릭 이벤트
-  $('.menu-bar-page').hide();
-
   $('.header .container .btn-menu .menu-bar').on('click',function(){
-    $(this).toggleClass('active');
-    if($(this).hasClass('active')){
-      $('.menu-bar-page').show(0,function(){
-        $('html,body').css('overflow','hidden');
-        $('.header .container .nav').hide();
-      });
-    } else {
-      $('.menu-bar-page').hide(0,function(){
-        $('html,body').css('overflow','visible');
-        $('.header .container .nav').show();
-      });
-    };  
+    $('.site-map').toggleClass('active');
+    $('.header .container .nav').hide();
+  });
+
+  $('.site-map .sec1 .close-btn').on('click',function(){
+    $('.site-map').removeClass('active');
+    $('.header .container .nav').show();
   });
 
   // 사이트맵 클릭 이벤트
@@ -114,4 +106,10 @@ $(document).ready(function(){
       $(this).next('.sub-menu').slideDown();
     }
   });
+
+  $('.site-map .sec3 button').on('click',function(){
+    $('.site-map .sec3 button').removeClass('active');
+    $(this).addClass('active');
+  });
+
 });

@@ -232,87 +232,21 @@
 .header .container .btn-menu .menu-bar.active {
   background: url(../img/btn_close.svg) no-repeat;
 }
-
-/* 메뉴 바 클릭시 페이지  */
-.menu-bar-page {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: #E0E7FB;
-  padding-top: 200px;
-  box-sizing: border-box;
-  overflow: hidden;
-  z-index: 10;
-}
-
-.menu-bar-page .container {
-  height: 100%;
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-}
-
-.menu-bar-page .container .item {
-  width: 336px;
-  height: 590px;
-  border: 1px solid #E0DFE2;
-  border-radius: 30px;
-  padding: 50px 35px;
-  box-sizing: border-box;
-  background: #fff;
-}
-
-.menu-bar-page .container .item span {
-  display: block;
-  font-size: 32px;
-  font-weight: 700;
-  color: #1f1f1f;
-  line-height: 46px;
-  margin-bottom: 40px;
-}
-
-.menu-bar-page .container .item a {
-  position: relative;
-  display: block;
-  font-size: 18px;
-  font-weight: 400;
-  color: #494949;
-  line-height: 26px;
-  margin-bottom: 16px;
-}
-
-.menu-bar-page .container .item a:hover {
-  color: #F1464D;
-}
-
-.menu-bar-page .container .item a::after {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  content: '';
-  display: block;
-  width: 14px;
-  height: 14px;
-  background: url(../img/menu_bar_arrow.svg) no-repeat;
-  display: none;
-}
-
-.menu-bar-page .container .item a:hover::after {
-  display: block;
-}
-
-/* 화면 0 ~ 1084px 사이트맵 */
+/* 사이트맵 */
 .site-map {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -450px;
   width: 450px;
   height: 100%;
   background: #fff;
   z-index: 1000;
   border-top-left-radius: 30px;
-  display: none;
+  transition: right 0.3s ease;
+}
+
+.site-map.active {
+  right: 0;
 }
 
 .site-map .sec1 {
@@ -338,6 +272,10 @@
   color: #333;
 }
 
+.site-map .sec1 .info-btn a span:hover {
+  color: #ED1C24;
+}
+
 .site-map .sec1 .info-btn a .career {
   padding-left: 22px;
 }
@@ -354,6 +292,10 @@
   background: url(../img/site_map_icon1.svg) no-repeat;
 }
 
+.site-map .sec1 .info-btn a .career:hover::before {
+  background: url(../img/site_map_hover_icon1.svg) no-repeat;
+}
+
 .site-map .sec1 .info-btn a .customer {
   padding-left: 28px;
 }
@@ -368,6 +310,10 @@
   width: 22px;
   height: 22px;
   background: url(../img/site_map_icon2.svg) no-repeat;
+}
+
+.site-map .sec1 .info-btn a .customer:hover::before {
+  background: url(../img/site_map_hover_icon2.svg) no-repeat;
 }
 
 .site-map .sec1 .close-btn {
@@ -475,6 +421,10 @@
   width: 1px;
   height: 10px;
   background: #cacaca;
+}
+
+.site-map .sec3 button.active {
+  color: #1F1F1F;
 }
 
 /* 비주얼1 */
@@ -637,56 +587,84 @@
 /* 비주얼3 */
 .visual3 {
   padding: 140px 0;
-  background-color: #E0E7FB;
+  background: #E0E7FB;
 }
 
-.visual3 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.visual3 .productSwiper {
+.visual3 .container .productSwiper {
   max-width: 1400px;
+  margin: 0 auto;
   overflow: hidden;
 }
 
-.visual3 .productSwiper .swiper-wrapper .swiper-slide a {
+.visual3 .container .productSwiper .swiper-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 32px;
+}
+
+
+
+.visual3 .container .productSwiper .swiper-wrapper .swiper-slide a {
+  position: relative;
   width: 380px;
   height: 380px;
-  opacity: 0.6;
   border-radius: 20px;
   background: url(../img/product_img1.png) no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
 }
 
-.visual3 .productSwiper .swiper-wrapper .swiper-slide a .tit {
+
+.visual3 .container .productSwiper .swiper-wrapper .swiper-slide a::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.visual3 .container .productSwiper .swiper-wrapper .swiper-slide a .tit {
+  position: relative;
   font-size: 52px;
   font-weight: 700;
+  line-height: 75px;
+  z-index: 2;
+  color: #fff;
 }
 
-.visual3 .productSwiper .swiper-wrapper .swiper-slide a p {
+.visual3 .container .productSwiper .swiper-wrapper .swiper-slide a p {
+  position: relative;
   font-size: 26px;
   font-weight: 700;
+  line-height: 38px;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
 }
 
-.visual3 .productSwiper .swiper-wrapper .swiper-slide a .txt {
+.visual3 .container .productSwiper .swiper-wrapper .swiper-slide a .more {
   position: relative;
   font-size: 20px;
   font-weight: 700;
+  line-height: 29px;
+  z-index: 2;
+  display: inline-block;
   padding-right: 18px;
+  color: #fff;
 }
 
-.visual3 .productSwiper .swiper-wrapper .swiper-slide a .txt::after {
+.visual3 .container .productSwiper .swiper-wrapper .swiper-slide a .more::after {
   position: absolute;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  content: "";
+  content: '';
   display: block;
   width: 10px;
   height: 16px;
