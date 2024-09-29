@@ -34,14 +34,14 @@ $(document).ready(function(){
     let index = $(this).index();
     $('.visual2 .container .bot-wrap').eq(index).show();
 
-    // var bgImages = [
-    //   'url(../img/visual2_img1.png)',  // 첫 번째 bot-wrap의 배경 이미지
-    //   'url(../img/visual2_img2.png)',  // 두 번째 bot-wrap의 배경 이미지
-    //   'url(../img/visual2_img3.png)',  // 세 번째 bot-wrap의 배경 이미지
-    //   'url(../img/visual2_img4.png)',  // 네 번째 bot-wrap의 배경 이미지
-    //   'url(../img/visual2_img5.png)'   // 다섯 번째 bot-wrap의 배경 이미지
-    // ];
-    // $('.visual2').css('background', bgImages[index]);
+    var bgImages = [
+      'url(assets/img/visual2_img1.png) no-repeat center / cover',  // 첫 번째 bot-wrap의 배경 이미지
+      'url(assets/img/visual2_img2.png) no-repeat center / cover',  // 두 번째 bot-wrap의 배경 이미지
+      'url(assets/img/visual2_img3.png) no-repeat center / cover',  // 세 번째 bot-wrap의 배경 이미지
+      'url(assets/img/visual2_img4.png) no-repeat center / cover',  // 네 번째 bot-wrap의 배경 이미지
+      'url(assets/img/visual2_img5.png) no-repeat center / cover'   // 다섯 번째 bot-wrap의 배경 이미지
+    ];
+    $('.visual2').css('background', bgImages[index]);
 
   
   });
@@ -52,9 +52,8 @@ $(document).ready(function(){
 
   //product 슬라이드
   let swiper = new Swiper('.productSwiper', {
-    slidesPerView: 3,
-    spaceBetween: 130,
-    direction: 'horizontal',
+    slidesPerView: 'auto',
+    centeredSlides: true,
     loop: true,
     navigation: {
       nextEl: '.swiper-button-next',
@@ -63,7 +62,7 @@ $(document).ready(function(){
   });
 
 
-
+  
 
 
   // 푸터 브랜드 sns 클릭 이벤트
@@ -95,7 +94,22 @@ $(document).ready(function(){
 
   $('.site-map .sec1 .close-btn').on('click',function(){
     $('.site-map').removeClass('active');
-    $('.header .container .nav').show();
+
+    // 화면 너비가 940px 이하일 경우 nav를 보이지 않도록 유지
+    if ($(window).width() > 940) {
+      $('.header .container .nav').show();
+    }
+  });
+
+    // 화면 크기 변경 시 nav 상태 유지
+  $(window).on('resize', function() {
+    if ($(window).width() > 940) {
+      // 화면이 940px 이상일 때는 nav가 항상 보여야 함
+      $('.header .container .nav').show();
+    } else {
+      // 화면이 940px 이하일 때는 nav를 숨김
+      $('.header .container .nav').hide();
+    }
   });
 
   // 사이트맵 클릭 이벤트
@@ -111,5 +125,23 @@ $(document).ready(function(){
     $('.site-map .sec3 button').removeClass('active');
     $(this).addClass('active');
   });
+
+  // 탑 버튼 클릭시 이벤트
+  $(window).scroll(function(){
+    if($(this).scrollTop() > 100) {
+      $(".top-btn").show();
+    } else {
+      $(".top-btn").hide();
+    }
+  });
+
+  $(".top-btn").on('click',function() {
+    $("html, body").animate({ scrollTop: 0 }, 500);
+    return false;
+  });
+
+
+
+
 
 });

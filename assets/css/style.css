@@ -488,6 +488,7 @@
   background: url(../img/visual2_img1.png) no-repeat;
   background-size: cover;
   z-index: -2;
+  min-height: 1078px;
 }
 
 .visual2::after {
@@ -590,34 +591,37 @@
   background: #E0E7FB;
 }
 
-.visual3 .container .productSwiper {
-  max-width: 1400px;
+.visual3 .container .top-wrap .txt2 {
+  margin-bottom: 0;
+}
+
+.visual3 .container .bot-wrap {
+  position: relative;
+}
+
+.visual3 .container .bot-wrap .productSwiper {
+  max-width: 1440px;
   margin: 0 auto;
   overflow: hidden;
 }
 
-.visual3 .container .productSwiper .swiper-wrapper {
-  display: flex;
-}
-
-
-
-.visual3 .container .productSwiper .swiper-wrapper .swiper-slide a {
+.visual3 .container .bot-wrap .productSwiper .swiper-wrapper .swiper-slide {
   position: relative;
-  width: 380px;
-  height: 380px;
-  border-radius: 20px;
-  background: url(../img/product_img1.png) no-repeat;
-  background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 32px;
+  width: 480px;
+  height: 480px;
+  border-radius: 20px;
+  background: url(../img/product_img1.png) no-repeat center / cover;
+  overflow: hidden;
+  transform: scale(0.8);
+  transition: transform 0.5s ease;
 }
 
-
-.visual3 .container .productSwiper .swiper-wrapper .swiper-slide a::after {
+.visual3 .container .bot-wrap .productSwiper .swiper-wrapper .swiper-slide::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -625,41 +629,83 @@
   display: block;
   width: 100%;
   height: 100%;
-  border-radius: 20px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.3);
 }
 
-.visual3 .container .productSwiper .swiper-wrapper .swiper-slide a .tit {
-  position: relative;
+.visual3 .container .bot-wrap .productSwiper .swiper-wrapper .swiper-slide-active {
+  transform: scale(1);
+  transition: transform 0.5s ease;
+}
+
+.visual3 .container .bot-wrap .productSwiper .swiper-wrapper .swiper-slide.slide2 {
+  background: url(../img/product_img2.png) no-repeat center / cover;
+}
+
+.visual3 .container .bot-wrap .productSwiper .swiper-wrapper .swiper-slide.slide3 {
+  background: url(../img/product_img3.png) no-repeat center / cover;
+}
+
+.visual3 .container .bot-wrap .productSwiper .swiper-wrapper .swiper-slide.slide4 {
+  background: url(../img/product_img4.png) no-repeat center / cover;
+}
+
+.visual3 .container .bot-wrap .productSwiper .swiper-wrapper .swiper-slide.slide5 {
+  background: url(../img/product_img5.png) no-repeat center / cover;
+}
+
+.visual3 .container .bot-wrap .productSwiper .swiper-wrapper .swiper-slide.slide6 {
+  background: url(../img/product_img6.png) no-repeat center / cover;
+}
+
+.visual3 .container .bot-wrap .productSwiper .swiper-wrapper .swiper-slide.slide7 {
+  background: url(../img/product_img7.png) no-repeat center / cover;
+}
+
+.visual3 .container .bot-wrap .productSwiper .swiper-wrapper .swiper-slide.slide8 {
+  background: url(../img/product_img8.png) no-repeat center / cover;
+}
+
+.visual3 .container .bot-wrap .productSwiper .swiper-wrapper .swiper-slide:hover div {
+  opacity: 1;
+}
+
+.visual3 .container .bot-wrap .productSwiper .swiper-wrapper .swiper-slide div {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.visual3 .container .bot-wrap .productSwiper .swiper-wrapper .swiper-slide .tit {
   font-size: 52px;
   font-weight: 700;
-  line-height: 75px;
-  z-index: 2;
   color: #fff;
 }
 
-.visual3 .container .productSwiper .swiper-wrapper .swiper-slide a p {
-  position: relative;
+.visual3 .container .bot-wrap .productSwiper .swiper-wrapper .swiper-slide p {
   font-size: 26px;
   font-weight: 700;
-  line-height: 38px;
-  z-index: 2;
   color: #fff;
+  line-height: 38px;
   text-align: center;
 }
 
-.visual3 .container .productSwiper .swiper-wrapper .swiper-slide a .more {
+.visual3 .container .bot-wrap .productSwiper .swiper-wrapper .swiper-slide .more {
   position: relative;
+  display: inline-block;
   font-size: 20px;
   font-weight: 700;
-  line-height: 29px;
-  z-index: 2;
-  display: inline-block;
-  padding-right: 18px;
   color: #fff;
+  padding-right: 18px;
 }
 
-.visual3 .container .productSwiper .swiper-wrapper .swiper-slide a .more::after {
+.visual3 .container .bot-wrap .productSwiper .swiper-wrapper .swiper-slide .more::after {
   position: absolute;
   top: 50%;
   right: 0;
@@ -671,11 +717,33 @@
   background: url(../img/arrow_right_w.svg) no-repeat;
 }
 
+.visual3 .container .bot-wrap .productSwiper .swiper-button-prev:after,
+.visual3 .container .bot-wrap .productSwiper .swiper-button-next:after {
+  content: '';
+}
+
+.visual3 .container .bot-wrap .productSwiper .swiper-button-prev,
+.visual3 .container .bot-wrap .productSwiper .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: url(../img/product_slide_arrow.svg) no-repeat;
+}
+
+.visual3 .container .bot-wrap .productSwiper .swiper-button-next {
+  left: auto;
+  right: 0;
+  background: url(../img/product_slide_arrow2.svg) no-repeat;
+}
+
 
 /* 비주얼4 */
 .visual4 {
   background: url(../img/esg_bg.png) no-repeat center / cover;
-  padding: 102px 0;
+  padding: 140px 0;
 }
 
 .visual4 .container .top-wrap .txt2 {
@@ -1093,6 +1161,29 @@
 
 .footer .container .footer-bot .family-btn .family-wrap a:hover {
   color: #ED1C24;
+}
+
+.top-btn button {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  background: #D91226 url(../img/top_btn.svg) no-repeat center;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  z-index: 1000;
+  text-indent: -9999px;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 2px;
+} 
+
+.top-btn button:hover {
+  background: none;
+  background-color: #D91226;
+  text-indent: 0;
 }
 
 
